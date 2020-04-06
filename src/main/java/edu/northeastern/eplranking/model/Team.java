@@ -1,10 +1,14 @@
 package edu.northeastern.eplranking.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Objects;
 
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
 public class Team {
     private String name;
 
@@ -23,5 +27,10 @@ public class Team {
     @Override
     public int hashCode() {
         return Objects.hash(name);
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

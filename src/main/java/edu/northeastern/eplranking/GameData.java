@@ -1,6 +1,7 @@
 package edu.northeastern.eplranking;
 
 import edu.northeastern.eplranking.model.MatchResult;
+import edu.northeastern.eplranking.model.PDModel;
 import edu.northeastern.eplranking.model.Team;
 import lombok.Getter;
 import lombok.Setter;
@@ -15,6 +16,7 @@ public class GameData {
 
     private List<Team> teamList = new ArrayList<>();
     private List<MatchResult> matchResults = new ArrayList<>();
+    private List<PDModel> pdModelList = new ArrayList<>();
 
     private GameData() {
     }

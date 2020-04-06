@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="922.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.northeastern.eplranking.ui.controller.TeamVsXPDController">
+   <top>
+      <AnchorPane prefHeight="88.0" prefWidth="677.0" BorderPane.alignment="CENTER">
+         <children>
+            <ComboBox fx:id="comboTeam" layoutX="136.0" layoutY="31.0" prefWidth="150.0" promptText="Select Team" />
+            <Label layoutX="136.0" layoutY="14.0" text="Team 1" />
+            <Button layoutX="542.0" layoutY="31.0" mnemonicParsing="false" onAction="#generate" text="Generate" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <LineChart fx:id="pdChart" layoutX="14.0" layoutY="31.0" legendSide="RIGHT" prefHeight="456.0" prefWidth="888.0">
+              <xAxis>
+                <NumberAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

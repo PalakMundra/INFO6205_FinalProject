@@ -10,7 +10,7 @@ import java.net.URISyntaxException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import java.util.Date;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -19,10 +19,11 @@ public class ParseDataFiles {
     public void parse() throws IOException, URISyntaxException {
         ObjectMapper mapper = new ObjectMapper();
         File dataDirectory = new File(getClass().getClassLoader().getResource("data").toURI());
+        GameData gameData = GameData.getInstance();
+        List<Team> teamList = gameData.getTeamList();
+
         for (File file : dataDirectory.listFiles()) {
             List<Map<String, Object>> list = mapper.readValue(file, List.class);
-            GameData gameData = GameData.getInstance();
-            List<Team> teamList = gameData.getTeamList();
 
             gameData.getMatchResults().addAll(list.stream().map(item -> {
                 Team homeTeam = teamList.stream().filter(team -> team.getName().equals(item.get("HomeTeam"))).findAny().orElse(null);
@@ -45,7 +46,7 @@ public class ParseDataFiles {
                 } catch (DateTimeParseException e) {
                     try {
                         matchResult.setMatchDate(LocalDate.parse((String) item.get("Date"), DateTimeFormatter.ofPattern("yyyy-MM-dd")));
-                    } catch (DateTimeParseException ex){
+                    } catch (DateTimeParseException ex) {
                         matchResult.setMatchDate(LocalDate.parse((String) item.get("Date"), DateTimeFormatter.ofPattern("dd/MM/yy")));
                     }
 
@@ -57,6 +58,9 @@ public class ParseDataFiles {
                 return matchResult;
             }).collect(Collectors.toList()));
         }
+
+        teamList.sort(Comparator.comparing(Team::getName));
+        gameData.getMatchResults().sort(Comparator.comparing(MatchResult::getMatchDate));
 
     }
 }
