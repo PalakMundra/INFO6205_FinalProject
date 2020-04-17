@@ -1,12 +1,13 @@
 # INFO6205_FinalProject
 
+Project Topic: Ranking EPL system 
+
 How to Run:
 It is a Maven project based on JavaFX and Java 13+ (required for running the project)
 The project can simply be launched by runnning the maven goal javafx:run or by going into the maven tab in IntelliJ and launching the javafx:run goal from Project->Plugins->javafx as long as the Project JDK has been set to Java 13 or above in the IntelliJ module settings
 
 Please note that 2 of the UI screens take a bit of time to load where the team logos are included. That is a flaw in the way JavaFX is loading the images from the internet and not a problem with our code 
 
-Project Topic: Ranking EPL system 
 
 Project Description: The project aims at creating user interface predicting the ranking of the teams participating in the EPL.
 
