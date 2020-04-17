@@ -1,18 +1,6 @@
 package edu.northeastern.eplranking.ui.controller;
 
-import edu.northeastern.eplranking.GameData;
-import edu.northeastern.eplranking.model.PDModel;
-import edu.northeastern.eplranking.model.Team;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-import javafx.fxml.FXML;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.XYChart;
-import javafx.scene.control.ComboBox;
-
-import java.util.List;
-import java.util.stream.Collectors;
-
+/*
 public class TeamVsXPDController {
     @FXML
     private ComboBox<Team> comboTeam;
@@ -53,4 +41,4 @@ public class TeamVsXPDController {
         }
         pdChart.setData(seriesList);
     }
-}
+}*/
