@@ -7,12 +7,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane minHeight="650.0" minWidth="1300.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.neu.javachip.aedfinalproject.ui.Splash">
+<AnchorPane minHeight="650.0" minWidth="1300.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.northeastern.eplranking.ui.controller.Splash">
    <children>
       <StackPane>
          <children>
-            <AnchorPane fx:id="bgMask" prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('/images/hallway_shallow.jpg');-fx-background-size: cover;" />
+            <AnchorPane fx:id="bgMask" prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('/assets/d0baaf6f6ca5475f94aa4ca45471c6c5_18.jpg');-fx-background-size: cover;" />
             <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(70, 70, 80, 0.5);" />
             <AnchorPane minHeight="650.0" minWidth="1300.0">
                <children>
@@ -44,7 +43,7 @@
                         </Circle>
                      </children>
                   </StackPane>
-                  <Text fill="WHITE" layoutX="308.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="DIGITAL REMOTE HOSPITAL" textAlignment="CENTER" wrappingWidth="684.7998504638672">
+                  <Text fill="WHITE" layoutX="308.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="EPL Predictor" textAlignment="CENTER" wrappingWidth="684.7998504638672">
                      <font>
                         <Font size="50.0" />
                      </font>
@@ -54,6 +53,7 @@
                         <Font size="37.0" />
                      </font>
                   </Text>
+                  <Text fx:id="txtStatus" fill="WHITE" layoutY="535.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Wait..." textAlignment="CENTER" wrappingWidth="1300.0" />
                </children>
             </AnchorPane>
          </children>

@@ -3,24 +3,30 @@
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="554.0" prefWidth="760.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.northeastern.eplranking.ui.controller.GenerateTeamsPdController">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.northeastern.eplranking.ui.controller.GenerateTeamsPdController">
    <top>
       <AnchorPane prefHeight="88.0" prefWidth="677.0" BorderPane.alignment="CENTER">
          <children>
-            <ComboBox fx:id="comboTeam1" layoutX="136.0" layoutY="31.0" prefWidth="150.0" promptText="Select Team" />
-            <ComboBox fx:id="comboTeam2" layoutX="324.0" layoutY="31.0" prefWidth="150.0" promptText="Select Team" />
-            <Label layoutX="324.0" layoutY="14.0" text="Team 2" />
-            <Label layoutX="136.0" layoutY="14.0" text="Team 1" />
-            <Button layoutX="542.0" layoutY="31.0" mnemonicParsing="false" onAction="#generate" text="Generate" />
+            <ComboBox fx:id="comboTeam1" layoutX="415.0" layoutY="39.0" prefWidth="150.0" promptText="Select Team" />
+            <ComboBox fx:id="comboTeam2" layoutX="603.0" layoutY="39.0" prefWidth="150.0" promptText="Select Team" />
+            <Label layoutX="603.0" layoutY="22.0" text="Team 2" />
+            <Button layoutX="28.0" layoutY="31.0" mnemonicParsing="false" onAction="#back" text="BACK" />
+            <Label layoutX="415.0" layoutY="22.0" text="Team 1" />
+            <Button layoutX="821.0" layoutY="39.0" mnemonicParsing="false" onAction="#generate" text="Generate" />
          </children>
       </AnchorPane>
    </top>
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <BarChart fx:id="pdChart" layoutX="130.0" layoutY="25.0">
+            <BarChart fx:id="pdChart" layoutX="91.0" layoutY="32.0" prefHeight="497.0" prefWidth="839.0">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
@@ -28,6 +34,12 @@
                 <NumberAxis side="LEFT" />
               </yAxis>
             </BarChart>
+            <Label fx:id="lblOverallWinProbability" layoutX="1004.0" layoutY="109.0" />
+            <Text fx:id="txtOverallWinProbability" layoutX="1007.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Label fx:id="lblOverallLossProbability" layoutX="1004.0" layoutY="158.0" />
+            <Text fx:id="txtOverallLossProbability" layoutX="1006.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+            <Label fx:id="lblOverallDrawProbability" layoutX="1004.0" layoutY="207.0" />
+            <Text fx:id="txtOverallDrawProbability" layoutX="1006.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" />
          </children>
       </AnchorPane>
    </center>
