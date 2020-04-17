@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane minHeight="650.0" minWidth="1300.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.neu.javachip.aedfinalproject.ui.Splash">
+   <children>
+      <StackPane>
+         <children>
+            <AnchorPane fx:id="bgMask" prefHeight="200.0" prefWidth="200.0" style="-fx-background-image: url('/images/hallway_shallow.jpg');-fx-background-size: cover;" />
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: rgba(70, 70, 80, 0.5);" />
+            <AnchorPane minHeight="650.0" minWidth="1300.0">
+               <children>
+                  <AnchorPane layoutX="565.0" layoutY="497.0">
+                     <children>
+                        <Circle fx:id="circle1" fill="#1f93ff00" radius="14.0" stroke="#00b3ff" strokeType="INSIDE" strokeWidth="5.0" />
+                        <Circle fx:id="circle2" fill="#1f93ff00" layoutX="39.0" radius="14.0" stroke="#ffa200" strokeType="INSIDE" strokeWidth="5.0" />
+                        <Circle fx:id="circle3" fill="#1f93ff00" layoutX="78.0" radius="14.0" stroke="RED" strokeType="INSIDE" strokeWidth="5.0" />
+                        <Circle fx:id="circle4" fill="#1f93ff00" layoutX="115.0" radius="14.0" stroke="#ff00fc" strokeType="INSIDE" strokeWidth="5.0" />
+                        <Circle fx:id="circle5" fill="#1f93ff00" layoutX="155.0" radius="14.0" stroke="#ffeeee" strokeType="INSIDE" strokeWidth="5.0" />
+                     </children>
+                  </AnchorPane>
+                  <StackPane layoutX="510.0" layoutY="101.0" prefHeight="223.0" prefWidth="279.0">
+                     <children>
+                        <Circle fx:id="circleBig1" fill="#2389e800" radius="96.0" stroke="#d6ff1f" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 16 12 4 2; -fx-stroke-dash-offset: 4; -fx-stroke-line-cap: butt;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Circle>
+                        <Circle fx:id="circleBig2" fill="#2389e800" radius="65.0" stroke="#3dffb1" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 12 5 4 2; -fx-stroke-dash-offset: 4; -fx-stroke-line-cap: butt;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Circle>
+                        <Circle fx:id="circleBig3" fill="#2389e800" radius="37.0" stroke="#ee70ff" strokeType="INSIDE" strokeWidth="10.0" style="-fx-stroke-dash-array: 12 2 4 2; -fx-stroke-dash-offset: 4; -fx-stroke-line-cap: butt;">
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Circle>
+                     </children>
+                  </StackPane>
+                  <Text fill="WHITE" layoutX="308.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="DIGITAL REMOTE HOSPITAL" textAlignment="CENTER" wrappingWidth="684.7998504638672">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="474.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="WELCOME" textAlignment="CENTER" wrappingWidth="352.7999572753906">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.northeastern.eplranking.ui.controller.PredictedResults2019Controller">
+   <children>
+      <TableView fx:id="tblPredictedResults" layoutX="307.0" layoutY="51.0" prefHeight="568.0" prefWidth="686.0">
+        <columns>
+            <TableColumn fx:id="colMatchDate" prefWidth="105.5999755859375" text="Match Date" />
+          <TableColumn fx:id="colHomeTeamName" prefWidth="139.19998168945312" text="Home" />
+          <TableColumn fx:id="colAwayTeamName" prefWidth="131.199951171875" text="Away" />
+            <TableColumn fx:id="colFullTimeHomeGoals" prefWidth="156.0" text="Full Time Home Goals" />
+            <TableColumn fx:id="colFullTimeAwayGoals" prefWidth="153.5999755859375" text="Full Time Away Goals" />
+        </columns>
+      </TableView>
+      <Button layoutX="61.0" layoutY="26.0" mnemonicParsing="false" onAction="#back" text="BACK" />
+   </children>
+</AnchorPane>

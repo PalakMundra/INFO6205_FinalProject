@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5077041602465331" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650" minWidth="-Infinity" prefHeight="594.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.northeastern.eplranking.ui.controller.Standings2019Controller">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+            <children>
+                <TableView fx:id="tblCurrentStandings" layoutX="31.0" layoutY="56.0" prefHeight="550.0" prefWidth="596.0">
+                    <columns>
+                        <TableColumn fx:id="colCurrentLogo" prefWidth="45.59999084472656" style="-fx-alignment: CENTER;" text="Logo" />
+                        <TableColumn fx:id="colCurrentClub" prefWidth="139.20001983642578" text="Club" />
+                        <TableColumn fx:id="colCurrentPlayed" prefWidth="43.2000732421875" text="Played" />
+                        <TableColumn fx:id="colCurrentWins" prefWidth="37.60003662109375" text="W" />
+                        <TableColumn fx:id="colCurrentLosses" prefWidth="44.00006103515625" text="L" />
+                        <TableColumn fx:id="colCurrentDraws" prefWidth="43.99993896484375" text="D" />
+                        <TableColumn fx:id="colCurrentGoalsFor" prefWidth="52.0" text="GF" />
+                        <TableColumn fx:id="colCurrentGoalsAgainst" prefWidth="57.60003662109375" text="GA" />
+                        <TableColumn fx:id="colCurrentGoalDifference" prefWidth="54.39996337890625" text="Diff" />
+                        <TableColumn fx:id="colCurrentPoints" prefWidth="73.5999755859375" text="Points" />
+                    </columns>
+                </TableView>
+                <Label layoutX="264.0" layoutY="14.0" text="Current Standings">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="549.0" prefWidth="480.0">
+            <Label layoutX="247.0" layoutY="14.0" text="Predicted Standings">
+                <font>
+                    <Font size="16.0" />
+                </font>
+            </Label>
+            <TableView fx:id="tblPredictedStandings" layoutX="34.0" layoutY="56.0" prefHeight="550.0" prefWidth="570.0">
+                <columns>
+                    <TableColumn fx:id="colPredictedLogo" prefWidth="45.599979400634766" style="-fx-alignment: CENTER;" text="Logo" />
+                    <TableColumn fx:id="colPredictedClub" prefWidth="134.4000244140625" text="Club" />
+                    <TableColumn fx:id="colPredictedPlayed" prefWidth="47.19999694824219" text="Played" />
+                    <TableColumn fx:id="colPredictedWins" prefWidth="33.5999755859375" text="W" />
+                    <TableColumn fx:id="colPredictedLosses" prefWidth="38.39996337890625" text="L" />
+                    <TableColumn fx:id="colPredictedDraws" prefWidth="38.4000244140625" text="D" />
+                    <TableColumn fx:id="colPredictedGoalsFor" prefWidth="44.79998779296875" text="GF" />
+                    <TableColumn fx:id="colPredictedGoalsAgainst" prefWidth="55.20001220703125" text="GA" />
+                    <TableColumn fx:id="colPredictedGoalDifference" prefWidth="59.199951171875" text="Diff" />
+                    <TableColumn fx:id="colPredictedPoints" prefWidth="70.39993896484373" text="Points" />
+                </columns>
+            </TableView>
+         <Button layoutX="470.0" layoutY="14.0" mnemonicParsing="false" text="View Simulated Results" />
+        </AnchorPane>
+    </items>
+</SplitPane>
