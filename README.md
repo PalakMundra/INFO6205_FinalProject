@@ -1,6 +1,4 @@
-# INFO6205_FinalProject
-
-Project Topic: Ranking EPL system 
+# INFO6205_FinalProject : Ranking EPL system
 
 How to Run:
 It is a Maven project based on JavaFX and Java 13+ (required for running the project)
